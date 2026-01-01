@@ -1,6 +1,7 @@
-import { Providers } from "../components/providers";
+import '../styles.css';
 
 import type { ReactNode } from "react";
+import { Providers } from "../components/providers";
 
 export default async function RootLayout({
   children,

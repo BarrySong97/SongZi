@@ -30,14 +30,14 @@ const apiHandler = new OpenAPIHandler(appRouter, {
   ],
 });
 
-const app = new Elysia()
+new Elysia()
   .use(
     cors({
       origin: env.CORS_ORIGIN,
       methods: ["GET", "POST", "OPTIONS"],
       allowedHeaders: ["Content-Type", "Authorization"],
       credentials: true,
-    }),
+    })
   )
   .all("/api/auth/*", async (context) => {
     const { request, status } = context;
@@ -61,6 +61,6 @@ const app = new Elysia()
     return response ?? new Response("Not Found", { status: 404 });
   })
   .get("/", () => "OK")
-  .listen(3000, () => {
-    console.log("Server is running on http://localhost:3000");
+  .listen(8000, () => {
+    console.log("Server is running on http://localhost:8000");
   });

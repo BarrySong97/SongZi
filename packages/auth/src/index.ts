@@ -1,10 +1,10 @@
-import { db } from "@songzi/db";
 import * as schema from "@songzi/db/schema/auth";
 import { env } from "@songzi/env/server";
-import { betterAuth } from "better-auth";
+import { betterAuth, type Auth, type BetterAuthOptions } from "better-auth";
 import { drizzleAdapter } from "better-auth/adapters/drizzle";
+import { db } from "@songzi/db";
 
-export const auth = betterAuth({
+export const auth: Auth<BetterAuthOptions> = betterAuth({
   database: drizzleAdapter(db, {
     provider: "pg",
 

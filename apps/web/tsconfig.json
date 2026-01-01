@@ -1,14 +1,19 @@
 {
+  "extends": "@songzi/config/tsconfig.base.json",
   "compilerOptions": {
+    "lib": ["ESNext", "DOM", "DOM.Iterable"],
     "strict": true,
     "target": "esnext",
+    "noEmit": true,
+    "isolatedModules": true,
+    "moduleDetection": "force",
+    "downlevelIteration": true,
+    "esModuleInterop": true,
     "module": "esnext",
     "moduleResolution": "bundler",
-    "allowImportingTsExtensions": true,
-    "noEmit": true,
-    "esModuleInterop": true,
-    "jsx": "react-jsx",
-    "skipLibCheck": true
-  },
-  "include": ["src/**/*", "*.ts"]
+    "skipLibCheck": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "jsx": "react-jsx"
+  }
 }

@@ -11,6 +11,7 @@
   },
   "scripts": {},
   "dependencies": {
+    "@orpc/contract": "1.13.2",
     "@orpc/server": "catalog:",
     "@orpc/client": "catalog:",
     "@orpc/openapi": "catalog:",

@@ -1,17 +1,5 @@
-import type { RouterClient } from "@orpc/server";
+export { appContract } from "../contracts/app";
+export type { AppContract } from "../contracts/app";
 
-import { protectedProcedure, publicProcedure } from "../index";
-
-export const appRouter = {
-  healthCheck: publicProcedure.handler(() => {
-    return "OK";
-  }),
-  privateData: protectedProcedure.handler(({ context }) => {
-    return {
-      message: "This is private",
-      user: context.session?.user,
-    };
-  }),
-};
-export type AppRouter = typeof appRouter;
-export type AppRouterClient = RouterClient<typeof appRouter>;
+export { appRouter } from "./app";
+export type { AppRouter, AppRouterClient } from "./app";
