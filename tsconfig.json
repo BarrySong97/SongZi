@@ -1,0 +1,3 @@
+{
+  "extends": "@songzi/config/tsconfig.base.json"
+}
