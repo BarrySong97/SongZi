@@ -3,25 +3,16 @@ import type { AppRouterClient } from "@songzi/api/routers/index";
 import { createORPCClient } from "@orpc/client";
 import { RPCLink } from "@orpc/client/fetch";
 import { createTanstackQueryUtils } from "@orpc/tanstack-query";
-import { env } from "@songzi/env/web";
-import { QueryCache, QueryClient } from "@tanstack/react-query";
-import { toast } from "sonner";
+import { QueryClient } from "@tanstack/react-query";
 
-export const queryClient = new QueryClient({
-  queryCache: new QueryCache({
-    onError: (error, query) => {
-      toast.error(`Error: ${error.message}`, {
-        action: {
-          label: "retry",
-          onClick: query.invalidate,
-        },
-      });
-    },
-  }),
-});
+const SERVER_URL = typeof window !== "undefined"
+  ? (import.meta.env.WAKU_PUBLIC_SERVER_URL || "http://localhost:3000")
+  : (process.env.WAKU_PUBLIC_SERVER_URL || "http://localhost:3000");
+
+export const queryClient = new QueryClient();
 
 export const link = new RPCLink({
-  url: `${env.VITE_SERVER_URL}/rpc`,
+  url: `${SERVER_URL}/rpc`,
   fetch(url, options) {
     return fetch(url, {
       ...options,
