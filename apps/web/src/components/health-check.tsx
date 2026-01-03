@@ -16,7 +16,7 @@ export function HealthCheck() {
         borderRadius: "8px",
       }}
     >
-      <h2>API Status</h2>
+      <h2>API Status22</h2>
       <p>{data}</p>
     </div>
   );
