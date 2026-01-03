@@ -61,6 +61,6 @@ new Elysia()
     return response ?? new Response("Not Found", { status: 404 });
   })
   .get("/", () => "OK")
-  .listen(8000, () => {
-    console.log("Server is running on http://localhost:8000");
+  .listen(Number(env.PORT), () => {
+    console.log(`Server is running on http://localhost:${env.PORT}`);
   });

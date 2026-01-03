@@ -1,4 +1,4 @@
-import '../styles.css';
+import "../styles.css";
 
 import type { ReactNode } from "react";
 import { Providers } from "../components/providers";
@@ -13,12 +13,12 @@ export default async function RootLayout({
       <div>
         <header style={{ padding: "1rem", borderBottom: "1px solid #eee" }}>
           <nav>
-            <a href="/" style={{ marginRight: "1rem" }}>Home</a>
+            <a href="/" style={{ marginRight: "1rem" }}>
+              Home
+            </a>
           </nav>
         </header>
-        <main style={{ padding: "1rem" }}>
-          {children}
-        </main>
+        <main style={{ padding: "1rem" }}>{children}</main>
       </div>
     </Providers>
   );
