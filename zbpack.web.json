@@ -1,4 +1,5 @@
 {
     "build_command": "bun run build",
-    "start_command": "bun run start"
+    "start_command": "bun run start",
+    "app_dir": "apps/web"
 }
