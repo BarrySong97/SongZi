@@ -14,7 +14,7 @@ export default async function RootLayout({
         <header style={{ padding: "1rem", borderBottom: "1px solid #eee" }}>
           <nav>
             <a href="/" style={{ marginRight: "1rem" }}>
-              Home2
+              Home233
             </a>
           </nav>
         </header>
