@@ -5,6 +5,7 @@ import { prefetchQuery } from "../utils/tanstack-query/tanstack-server";
 
 export default async function HomePage() {
   const state = await prefetchQuery(orpc.healthCheck.queryOptions());
+  console.log(state.queries);
   return (
     <HydrationBoundary state={state}>
       <h1>Welcome to Waku</h1>
