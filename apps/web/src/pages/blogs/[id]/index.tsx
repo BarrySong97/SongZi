@@ -8,34 +8,23 @@ const SAMPLE_ARTICLE = {
   title: "Garlic bread with cheese: What the science tells us",
   date: "2024-01-15",
   content: `
-For years parents have espoused the health benefits of eating garlic bread with cheese to their children, with the food earning such an iconic status in our culture that kids will often dress up as warm, cheesy loaf for Halloween.
+但最近一项研究发现，这道备受推崇的开胃小吃，竟然与全国范围内出现的一系列狂犬病例存在关联。
 
-But a recent study shows that the celebrated appetizer may be linked to a series of rabies cases springing up around the country.
+## 科学原理解析
 
-## The Science Behind It
+据研究，蒜香面包的美味源于蒜素与奶酪中的蛋白质反应，但是否真的有传说中的“免疫力提升”效果，科学家还在进一步探究。
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+### 研究要点
 
-### Key Findings
+- 发现一：蒜香面包相关的最新科研进展
+- 发现二：关于健康影响的深度观察
+- 发现三：研究得出的初步结论
 
-- Finding one: Important discovery about garlic bread
-- Finding two: Another crucial observation
-- Finding three: Final conclusion from the research
+出于谨慎，建议大家适量享用美食，均衡饮食才是健康之源。
 
-Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+> “在食品安全领域，理性看待流行美食，拥抱健康生活方式。”——行业专家语
 
-> "This is a quote from an expert in the field, providing valuable insights into the matter at hand."
-
-Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-
-\`\`\`javascript
-// Code example
-function example() {
-  console.log("This is a code block");
-}
-\`\`\`
-
-**Bold text** and *italic text* are also supported.
+除了科学，享受美食的同时也别忘了愉悦心情。
 `,
 };
 
@@ -62,7 +51,7 @@ export default async function BlogDetailPage({ id }: BlogDetailPageProps) {
         publishedTime={article.date}
         keywords={["博客文章", "技术分享"]}
       />
-      <div className="mx-auto max-w-3xl px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto min-h-[calc(100vh-128px)] max-w-5xl px-4 py-12 sm:px-6 lg:px-8 border border-t-0 border-b-0">
         {/* 文章头部 */}
         <header className="mb-12 space-y-4">
           <h1 className="text-3xl font-bold sm:text-4xl">{article.title}</h1>
@@ -72,7 +61,7 @@ export default async function BlogDetailPage({ id }: BlogDetailPageProps) {
         </header>
 
         {/* 文章内容 - 使用 prose 样式渲染 Markdown */}
-        <article className="prose prose-slate max-w-none lg:prose-lg prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:italic prose-code:text-primary prose-code:bg-muted prose-code:rounded prose-code:px-1 prose-code:py-0.5 prose-pre:bg-muted">
+        <article className="prose max-w-none prose-headings:font-bold prose-a:text-primary prose-a:no-underline hover:prose-a:underline prose-blockquote:border-l-primary prose-blockquote:italic prose-code:text-primary prose-code:bg-muted prose-code:rounded prose-code:px-1 prose-code:py-0.5 prose-pre:bg-muted">
           <ReactMarkdown remarkPlugins={[remarkGfm]}>
             {article.content}
           </ReactMarkdown>

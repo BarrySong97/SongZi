@@ -10,9 +10,13 @@ export default async function HomePage() {
         description="Barryson4real 的个人主页，全栈工程师，分享技术、思考和生活。"
         keywords={["个人主页", "全栈工程师", "前端", "React", "TypeScript"]}
       />
-      <div className="mx-auto max-w-3xl space-y-16 px-4 py-12 sm:px-6 lg:px-8">
-        <HeroSection />
-        <ExperienceSection />
+      <div className="mx-auto max-w-5xl  min-h-[calc(100vh-128px)] border border-border border-t-0 border-b-0">
+        <div className="border-b border-b-border">
+          <HeroSection />
+        </div>
+        <div className="border-b border-b-border">
+          <ExperienceSection />
+        </div>
       </div>
     </>
   );
@@ -20,6 +24,6 @@ export default async function HomePage() {
 
 export const getConfig = async () => {
   return {
-    render: "static",
+    render: "dynamic",
   } as const;
 };

@@ -20,7 +20,8 @@
 		"react-dom": "catalog:",
 		"react-server-dom-webpack": "~19.2.3",
 		"tailwind-merge": "catalog:",
-		"waku": "1.0.0-alpha.0"
+		"waku": "1.0.0-alpha.0",
+		"lucide-react": "catalog:"
 	},
 	"devDependencies": {
 		"@tailwindcss/postcss": "^4.1.9",

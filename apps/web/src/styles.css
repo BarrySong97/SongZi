@@ -7,6 +7,25 @@
 
 @custom-variant dark (&:is(.dark *));
 
+/* Alibaba PuHuiTi 3 Font */
+@font-face {
+    font-family: "Alibaba PuHuiTi 3";
+    src: url("/font/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff2") format("woff2"),
+        url("/font/AlibabaPuHuiTi-3-55-Regular/AlibabaPuHuiTi-3-55-Regular.woff") format("woff");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: "Alibaba PuHuiTi 3";
+    src: url("/font/AlibabaPuHuiTi-3-75-SemiBold/AlibabaPuHuiTi-3-75-SemiBold.woff2") format("woff2"),
+        url("/font/AlibabaPuHuiTi-3-75-SemiBold/AlibabaPuHuiTi-3-75-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
 @theme inline {
     --font-sans: var(--font-sans);
     --font-mono: var(--font-mono);
@@ -52,6 +71,7 @@
 }
 
 :root {
+    --font-sans: "Alibaba PuHuiTi 3", ui-sans-serif, system-ui, sans-serif;
     --background: oklch(0.98 0.000 100);
     --foreground: oklch(0.13 0.028 261.692);
     --card: oklch(1 0 0);
@@ -67,7 +87,7 @@
     --accent: oklch(0.967 0.003 264.542);
     --accent-foreground: oklch(0.21 0.034 264.665);
     --destructive: oklch(0.577 0.245 27.325);
-    --border: oklch(0.928 0.006 264.531);
+    --border: oklch(0.910 0.006 264.531);
     --input: oklch(0.928 0.006 264.531);
     --ring: oklch(0.707 0.022 261.325);
     --chart-1: oklch(0.646 0.222 41.116);
@@ -127,5 +147,6 @@
 
     body {
         @apply bg-background text-foreground;
+        font-family: var(--font-sans);
     }
 }

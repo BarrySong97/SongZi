@@ -38,9 +38,16 @@ export default async function BlogsPage() {
       <Metadata
         title="博客 - 4REAL"
         description="分享技术文章、项目经验和学习笔记。涵盖前端开发、全栈技术、TypeScript、React 等主题。"
-        keywords={["博客", "技术文章", "前端开发", "全栈", "React", "TypeScript"]}
+        keywords={[
+          "博客",
+          "技术文章",
+          "前端开发",
+          "全栈",
+          "React",
+          "TypeScript",
+        ]}
       />
-      <div className="mx-auto max-w-3xl space-y-12 px-4 py-12 sm:px-6 lg:px-8">
+      <div className="mx-auto max-w-5xl space-y-12 px-4 py-12 sm:px-6 lg:px-8 border border-t-0 border-b-0 min-h-[calc(100vh-128px)] ">
         <div className="space-y-2">
           <h1 className="text-2xl font-bold sm:text-3xl">博客</h1>
           <p className="text-sm text-muted-foreground">
