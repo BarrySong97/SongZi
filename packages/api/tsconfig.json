@@ -1,10 +1,10 @@
 {
-  "extends": "@songzi/config/tsconfig.base.json",
-  "compilerOptions": {
-    "sourceMap": true,
-    "outDir": "dist",
-    "composite": true,
-    "declaration": true,
-    "declarationMap": true
-  }
+	"extends": "@songzi/config/tsconfig.base.json",
+	"compilerOptions": {
+		"sourceMap": true,
+		"outDir": "dist",
+		"composite": true,
+		"declaration": true,
+		"declarationMap": true
+	}
 }

@@ -1,0 +1,19 @@
+import { NavMenu } from "./nav-menu";
+
+// EDIT HERE: Blog name
+const BLOG_NAME = "4REAL";
+
+export interface HeaderProps {
+  className?: string;
+}
+
+export default async function Header({ className }: HeaderProps) {
+  return (
+    <header className="fixed top-0 z-50 w-full bg-background/95 backdrop-blur-sm">
+      <div className="mx-auto flex max-w-3xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
+        <h1 className="text-xl font-bold sm:text-2xl">{BLOG_NAME}</h1>
+        <NavMenu />
+      </div>
+    </header>
+  );
+}

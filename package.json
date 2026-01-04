@@ -1,49 +1,58 @@
 {
-  "name": "songzi",
-  "private": true,
-  "workspaces": {
-    "packages": [
-      "apps/*",
-      "packages/*"
-    ],
-    "catalog": {
-      "dotenv": "^17.2.2",
-      "zod": "^4.1.13",
-      "typescript": "^5",
-      "@types/bun": "^1.3.4",
-      "elysia": "^1.3.21",
-      "@orpc/server": "^1.12.2",
-      "@orpc/openapi": "^1.12.2",
-      "@orpc/zod": "^1.12.2",
-      "better-auth": "^1.4.9",
-      "@orpc/client": "^1.12.2"
-    }
-  },
-  "type": "module",
-  "scripts": {
-    "check": "biome check --write .",
-    "dev": "turbo dev",
-    "build": "turbo build",
-    "check-types": "turbo check-types",
-    "dev:native": "turbo -F native dev",
-    "dev:web": "turbo -F web dev",
-    "dev:server": "turbo -F server dev",
-    "db:push": "turbo -F @songzi/db db:push",
-    "db:studio": "turbo -F @songzi/db db:studio",
-    "db:generate": "turbo -F @songzi/db db:generate",
-    "db:migrate": "turbo -F @songzi/db db:migrate"
-  },
-  "dependencies": {
-    "dotenv": "catalog:",
-    "zod": "catalog:",
-    "@songzi/env": "workspace:*"
-  },
-  "devDependencies": {
-    "turbo": "^2.6.3",
-    "@biomejs/biome": "^2.2.0",
-    "typescript": "catalog:",
-    "@types/bun": "catalog:",
-    "@songzi/config": "workspace:*"
-  },
-  "packageManager": "bun@1.3.5"
+	"name": "songzi",
+	"private": true,
+	"workspaces": {
+		"packages": [
+			"apps/*",
+			"packages/*"
+		],
+		"catalog": {
+			"dotenv": "^17.2.2",
+			"zod": "^4.1.13",
+			"typescript": "^5",
+			"@types/bun": "^1.3.4",
+			"elysia": "^1.3.21",
+			"@orpc/server": "^1.12.2",
+			"@orpc/openapi": "^1.12.2",
+			"@orpc/zod": "^1.12.2",
+			"better-auth": "^1.4.9",
+			"@orpc/client": "^1.12.2",
+			"react": "~19.2.3",
+			"react-dom": "~19.2.3",
+			"@types/react": "^19.2.7",
+			"@types/react-dom": "^19.2.3",
+			"tailwindcss": "^4.1.18",
+			"tailwind-merge": "^2.5.5",
+			"tw-animate-css": "1.3.3"
+		}
+	},
+	"type": "module",
+	"scripts": {
+		"check": "biome check --write .",
+		"dev": "turbo dev",
+		"build": "turbo build",
+		"check-types": "turbo check-types",
+		"dev:native": "turbo -F native dev",
+		"dev:web": "turbo -F web dev",
+		"dev:server": "turbo -F server dev",
+		"db:push": "turbo -F @songzi/db db:push",
+		"db:studio": "turbo -F @songzi/db db:studio",
+		"db:generate": "turbo -F @songzi/db db:generate",
+		"db:migrate": "turbo -F @songzi/db db:migrate"
+	},
+	"dependencies": {
+		"@songzi/env": "workspace:*",
+		"dotenv": "catalog:",
+		"react-markdown": "^10.1.0",
+		"remark-gfm": "^4.0.1",
+		"zod": "catalog:"
+	},
+	"devDependencies": {
+		"turbo": "^2.6.3",
+		"@biomejs/biome": "^2.2.0",
+		"typescript": "catalog:",
+		"@types/bun": "catalog:",
+		"@songzi/config": "workspace:*"
+	},
+	"packageManager": "bun@1.3.5"
 }

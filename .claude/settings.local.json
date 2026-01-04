@@ -1,7 +1,12 @@
 {
   "permissions": {
     "allow": [
-      "WebFetch(domain:waku.gg)"
+      "WebFetch(domain:waku.gg)",
+      "Bash(wc:*)",
+      "Bash(find:*)",
+      "Bash(bun install)",
+      "Bash(ls:*)",
+      "Bash(bun add:*)"
     ]
   }
 }

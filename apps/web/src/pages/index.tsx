@@ -1,17 +1,20 @@
-import { HydrationBoundary } from "@tanstack/react-query";
-import { HealthCheck } from "../components/health-check";
-import { orpc } from "../utils/orpc";
-import { prefetchQuery } from "../utils/tanstack-query/tanstack-server";
+import ExperienceSection from "../components/home/experience-section";
+import HeroSection from "../components/home/hero-section";
+import { Metadata } from "../components/seo/metadata";
 
 export default async function HomePage() {
-  const state = await prefetchQuery(orpc.healthCheck.queryOptions());
-  console.log(state.queries);
   return (
-    <HydrationBoundary state={state}>
-      <h1>Welcome to Waku22222333</h1>
-      <p>A minimal React framework with RSC support.</p>
-      <HealthCheck />
-    </HydrationBoundary>
+    <>
+      <Metadata
+        title="4REAL - 个人主页"
+        description="Barryson4real 的个人主页，全栈工程师，分享技术、思考和生活。"
+        keywords={["个人主页", "全栈工程师", "前端", "React", "TypeScript"]}
+      />
+      <div className="mx-auto max-w-3xl space-y-16 px-4 py-12 sm:px-6 lg:px-8">
+        <HeroSection />
+        <ExperienceSection />
+      </div>
+    </>
   );
 }
 
