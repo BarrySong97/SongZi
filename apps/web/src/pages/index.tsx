@@ -8,7 +8,7 @@ export default async function HomePage() {
   console.log(state.queries);
   return (
     <HydrationBoundary state={state}>
-      <h1>Welcome to Waku</h1>
+      <h1>Welcome to Waku22</h1>
       <p>A minimal React framework with RSC support.</p>
       <HealthCheck />
     </HydrationBoundary>
